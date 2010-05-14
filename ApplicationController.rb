@@ -15,6 +15,11 @@ class ApplicationController
                       selector: :"handleBackgroundColorChange:",
                       name: PreferencesController::BackgroundColorChangedNotification,
                       object: nil)
+  center.addObserver(self,
+                     selector: :"handleTwitterSearchQueryChange:",
+                     name: PreferencesController::TwitterSearchQueryChangedNotification,
+                     object: nil)
+    
     
     return self
   end
@@ -45,6 +50,11 @@ class ApplicationController
     statusLabel.textColor = preferenceController.textColor
   end
   
+  def handleTwitterSearchQueryChange(notification)
+    twitterService.cancel!
+    refreshTweets
+  end
+  
   def preferenceController
     unless @preferenceController
       @preferenceController = PreferencesController.alloc.init
@@ -62,7 +72,10 @@ class ApplicationController
   end
   
   def twitterService
-    @twitterService ||= TwitterService.new("%23telegraaf", delegate: self, refreshInterval: 30)
+    if @twitterService.nil? || @twitterService.cancelled?
+      @twitterService = TwitterService.new(preferenceController.twitterSearchQuery, delegate: self, refreshInterval: 30)
+    end
+    @twitterService
   end
   
   def newTweetsReceived(tweets)

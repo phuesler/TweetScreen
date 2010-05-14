@@ -491,7 +491,7 @@
 							<string key="NSTitle">View</string>
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSMenuItem" id="747101096">
+								<object class="NSMenuItem" id="1055166189">
 									<reference key="NSMenu" ref="466310130"/>
 									<string key="NSTitle">Fullscreen</string>
 									<string type="base64-UTF8" key="NSKeyEquiv">DQ</string>
@@ -566,7 +566,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{335, 292}, {704, 578}}</string>
 				<int key="NSWTFlags">1946157056</int>
-				<string key="NSWindowTitle">Window</string>
+				<string key="NSWindowTitle">TweetScreenMR</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
@@ -1085,7 +1085,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">toggleFullScreen:</string>
 						<reference key="source" ref="156485114"/>
-						<reference key="destination" ref="747101096"/>
+						<reference key="destination" ref="1055166189"/>
 					</object>
 					<int key="connectionID">414</int>
 				</object>
@@ -1437,7 +1437,7 @@
 						<reference key="object" ref="466310130"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="747101096"/>
+							<reference ref="1055166189"/>
 						</object>
 						<reference key="parent" ref="586577488"/>
 					</object>
@@ -1614,7 +1614,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">413</int>
-						<reference key="object" ref="747101096"/>
+						<reference key="object" ref="1055166189"/>
 						<reference key="parent" ref="466310130"/>
 					</object>
 				</object>
