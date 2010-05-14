@@ -43,6 +43,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		038DC178119E052700255315 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 038DC177119E052700255315 /* Icon.icns */; };
 		03C0A3B7119D61DC00571AD5 /* ApplicationController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A3B6119D61DC00571AD5 /* ApplicationController.rb */; };
 		03C0A510119D8EC900571AD5 /* TwitterService.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A50F119D8EC900571AD5 /* TwitterService.rb */; };
 		03C0A534119D96BF00571AD5 /* TweetsTableDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A533119D96BF00571AD5 /* TweetsTableDelegate.rb */; };
@@ -70,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		038DC177119E052700255315 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		03C0A3B6119D61DC00571AD5 /* ApplicationController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ApplicationController.rb; sourceTree = "<group>"; };
 		03C0A50F119D8EC900571AD5 /* TwitterService.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TwitterService.rb; sourceTree = "<group>"; };
 		03C0A533119D96BF00571AD5 /* TweetsTableDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TweetsTableDelegate.rb; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				038DC177119E052700255315 /* Icon.icns */,
 				2BFA9DA510CDF852007972A1 /* MainMenu.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -250,6 +253,7 @@
 				03C0A568119D9FB500571AD5 /* PreferencesController.rb in Resources */,
 				03C0A56A119D9FD200571AD5 /* Preferences.xib in Resources */,
 				03C0A5E7119DB1D300571AD5 /* TweetsView.rb in Resources */,
+				038DC178119E052700255315 /* Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
