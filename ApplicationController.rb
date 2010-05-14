@@ -52,6 +52,7 @@ class ApplicationController
   
   def handleTwitterSearchQueryChange(notification)
     twitterService.cancel!
+    tweetsTableDelegate.tweets = []
     refreshTweets
   end
   
@@ -79,7 +80,7 @@ class ApplicationController
   end
   
   def newTweetsReceived(tweets)
-    tweetsTableDelegate.tweets = tweets
+    tweetsTableDelegate.tweets = tweets + tweetsTableDelegate.tweets
     statusLabel.stringValue = "Finished updating tweets"
   end
   
