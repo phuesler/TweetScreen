@@ -46,6 +46,9 @@
 		03C0A3B7119D61DC00571AD5 /* ApplicationController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A3B6119D61DC00571AD5 /* ApplicationController.rb */; };
 		03C0A510119D8EC900571AD5 /* TwitterService.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A50F119D8EC900571AD5 /* TwitterService.rb */; };
 		03C0A534119D96BF00571AD5 /* TweetsTableDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A533119D96BF00571AD5 /* TweetsTableDelegate.rb */; };
+		03C0A566119D9E7A00571AD5 /* NSUserDefaultsColorSupport.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A565119D9E7A00571AD5 /* NSUserDefaultsColorSupport.rb */; };
+		03C0A568119D9FB500571AD5 /* PreferencesController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A567119D9FB500571AD5 /* PreferencesController.rb */; };
+		03C0A56A119D9FD200571AD5 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A569119D9FD200571AD5 /* Preferences.xib */; };
 		2BFA9DA710CDF852007972A1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA9DA510CDF852007972A1 /* MainMenu.xib */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
@@ -70,6 +73,9 @@
 		03C0A3B6119D61DC00571AD5 /* ApplicationController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ApplicationController.rb; sourceTree = "<group>"; };
 		03C0A50F119D8EC900571AD5 /* TwitterService.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TwitterService.rb; sourceTree = "<group>"; };
 		03C0A533119D96BF00571AD5 /* TweetsTableDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TweetsTableDelegate.rb; sourceTree = "<group>"; };
+		03C0A565119D9E7A00571AD5 /* NSUserDefaultsColorSupport.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NSUserDefaultsColorSupport.rb; sourceTree = "<group>"; };
+		03C0A567119D9FB500571AD5 /* PreferencesController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesController.rb; sourceTree = "<group>"; };
+		03C0A569119D9FD200571AD5 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -104,6 +110,8 @@
 				03C0A3B6119D61DC00571AD5 /* ApplicationController.rb */,
 				03C0A50F119D8EC900571AD5 /* TwitterService.rb */,
 				03C0A533119D96BF00571AD5 /* TweetsTableDelegate.rb */,
+				03C0A565119D9E7A00571AD5 /* NSUserDefaultsColorSupport.rb */,
+				03C0A567119D9FB500571AD5 /* PreferencesController.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				2BFA9DA510CDF852007972A1 /* MainMenu.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				03C0A569119D9FD200571AD5 /* Preferences.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -238,6 +247,9 @@
 				03C0A3B7119D61DC00571AD5 /* ApplicationController.rb in Resources */,
 				03C0A510119D8EC900571AD5 /* TwitterService.rb in Resources */,
 				03C0A534119D96BF00571AD5 /* TweetsTableDelegate.rb in Resources */,
+				03C0A566119D9E7A00571AD5 /* NSUserDefaultsColorSupport.rb in Resources */,
+				03C0A568119D9FB500571AD5 /* PreferencesController.rb in Resources */,
+				03C0A56A119D9FD200571AD5 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
