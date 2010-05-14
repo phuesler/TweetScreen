@@ -67,7 +67,7 @@ class ApplicationController
   end
   
   def refreshTweets
-    statusLabel.stringValue = "Updating tweets"
+    statusLabel.stringValue = "Updating tweets for: #{preferenceController.twitterSearchQuery}"
     twitterService.refreshSearch
   end
   
