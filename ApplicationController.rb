@@ -1,5 +1,5 @@
 class ApplicationController
-  attr_accessor :tweetsTableView, :tweetsTableDelegate, :tweetTableCell, :statusLabel
+  attr_accessor :contentView, :tweetsTableView, :tweetsTableDelegate, :tweetTableCell, :statusLabel
   
   def init
     if !super
@@ -23,6 +23,14 @@ class ApplicationController
     refreshTweets
     handleTextColorChange(nil)
     handleBackgroundColorChange(nil)
+  end
+  
+  def toggleFullScreen(sender)
+    if contentView.isInFullScreenMode
+      contentView.exitFullScreenModeWithOptions(nil)
+    else
+      contentView.enterFullScreenMode(contentView.window.screen,withOptions:nil)
+    end
   end
   
   def handleBackgroundColorChange(notification)
