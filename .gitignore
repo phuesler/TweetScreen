@@ -1,0 +1,15 @@
+# xcode noise
+*.mode1v3
+*.pbxuser
+*.perspective 
+*.perspectivev3
+*.pyc 
+*~.nib/
+build/*
+appcast/*
+
+.DS_Store
+profile
+dsa_priv.pem
+.rake_tasks~
+tmp/*
