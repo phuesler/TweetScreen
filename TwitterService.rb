@@ -4,10 +4,15 @@ class TwitterService
   TWITTER_SEARCH_URL = "http://twitter.com/search.json"
   attr_reader :delegate
   
-  def initialize(query="Twitter", delegate)
+  def initialize(query="Twitter", options = {delegate: nil, refreshInterval: 30})
     @query = query
-    @delegate = delegate
+    @delegate = options[:delegate]
     @refreshURL = nil
+    @timer = NSTimer.scheduledTimerWithTimeInterval(options[:refreshInterval],
+                                                    target: self,
+                                                    selector: :refreshSearch,
+                                                    userInfo: nil,
+                                                    repeats: false)
   end
   
   def refreshSearch
