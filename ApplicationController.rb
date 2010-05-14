@@ -1,5 +1,5 @@
 class ApplicationController
-  attr_accessor :tweetsTableView, :tweetsTableDelegate, :tweetTableCell
+  attr_accessor :tweetsTableView, :tweetsTableDelegate, :tweetTableCell, :statusLabel
   
   def init
     if !super
@@ -26,6 +26,7 @@ class ApplicationController
   end
   
   def handleBackgroundColorChange(notification)
+    statusLabel.backgroundColor = preferenceController.backgroundColor
     tweetsTableView.backgroundColor = preferenceController.backgroundColor
   end
   
@@ -33,6 +34,7 @@ class ApplicationController
     tweetTableCell.textColor = preferenceController.textColor
     # redraw table. FIXME: Find a better way to do this
     tweetsTableView.reloadData
+    statusLabel.textColor = preferenceController.textColor
   end
   
   def preferenceController
@@ -47,6 +49,7 @@ class ApplicationController
   end
   
   def refreshTweets
+    statusLabel.stringValue = "Updating tweets"
     twitterService.refreshSearch
   end
   
@@ -56,5 +59,10 @@ class ApplicationController
   
   def newTweetsReceived(tweets)
     tweetsTableDelegate.tweets = tweets
+    statusLabel.stringValue = "Finished updating tweets"
+  end
+  
+  def convertColor(color)
+    CGColorCreateGenericRGB(color.redComponent, color.greenComponent, color.blueComponent, 1)
   end
 end
