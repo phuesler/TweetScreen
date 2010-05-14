@@ -1,19 +1,8 @@
-require 'json'
-
 class ApplicationController
   YES = true
   NO = false
   
-  attr_accessor :tweetsTableView
-  
-  def init
-    if !super
-      return nil
-    else
-      @timeline = []
-      return self
-    end
-  end
+  attr_accessor :tweetsTableView, :tweetsTableDelegate
   
   def applicationDidFinishLaunching(notification)
     refreshTweets
@@ -33,17 +22,7 @@ class ApplicationController
   end
   
   def newTweetsReceived(tweets)
-    NSLog("tt: #{tweets.inspect}")
-    @timeline = tweets
-    tweetsTableView.reloadData
-  end
-  
-  def numberOfRowsInTableView(tableView)
-    @timeline.size
-  end
-  
-  def tableView(tableView, objectValueForTableColumn: column, row: row)
-    @timeline[row].valueForKey(column.identifier.to_sym)
+    tweetsTableDelegate.tweets = tweets
   end
   
   def applicationShouldTerminate(sender)

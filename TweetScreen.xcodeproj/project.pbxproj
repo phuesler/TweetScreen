@@ -45,6 +45,7 @@
 /* Begin PBXBuildFile section */
 		03C0A3B7119D61DC00571AD5 /* ApplicationController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A3B6119D61DC00571AD5 /* ApplicationController.rb */; };
 		03C0A510119D8EC900571AD5 /* TwitterService.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A50F119D8EC900571AD5 /* TwitterService.rb */; };
+		03C0A534119D96BF00571AD5 /* TweetsTableDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 03C0A533119D96BF00571AD5 /* TweetsTableDelegate.rb */; };
 		2BFA9DA710CDF852007972A1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA9DA510CDF852007972A1 /* MainMenu.xib */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		03C0A3B6119D61DC00571AD5 /* ApplicationController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ApplicationController.rb; sourceTree = "<group>"; };
 		03C0A50F119D8EC900571AD5 /* TwitterService.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TwitterService.rb; sourceTree = "<group>"; };
+		03C0A533119D96BF00571AD5 /* TweetsTableDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TweetsTableDelegate.rb; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -101,6 +103,7 @@
 			children = (
 				03C0A3B6119D61DC00571AD5 /* ApplicationController.rb */,
 				03C0A50F119D8EC900571AD5 /* TwitterService.rb */,
+				03C0A533119D96BF00571AD5 /* TweetsTableDelegate.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				2BFA9DA710CDF852007972A1 /* MainMenu.xib in Resources */,
 				03C0A3B7119D61DC00571AD5 /* ApplicationController.rb in Resources */,
 				03C0A510119D8EC900571AD5 /* TwitterService.rb in Resources */,
+				03C0A534119D96BF00571AD5 /* TweetsTableDelegate.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

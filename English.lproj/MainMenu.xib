@@ -830,7 +830,7 @@
 															</object>
 														</object>
 													</object>
-													<object class="NSImageCell" key="NSDataCell" id="571346031">
+													<object class="NSImageCell" key="NSDataCell" id="292380250">
 														<int key="NSCellFlags">67239424</int>
 														<int key="NSCellFlags2">33554432</int>
 														<object class="NSFont" key="NSSupport">
@@ -953,8 +953,11 @@
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
 			</object>
-			<object class="NSCustomObject" id="931549924">
+			<object class="NSCustomObject" id="277907367">
 				<string key="NSClassName">ApplicationController</string>
+			</object>
+			<object class="NSCustomObject" id="233557051">
+				<string key="NSClassName">TweetsTableDelegate</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -1276,33 +1279,49 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="1021"/>
-						<reference key="destination" ref="931549924"/>
+						<reference key="destination" ref="277907367"/>
 					</object>
 					<int key="connectionID">385</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">tweetsTableView</string>
-						<reference key="source" ref="931549924"/>
+						<reference key="source" ref="277907367"/>
 						<reference key="destination" ref="160169865"/>
 					</object>
 					<int key="connectionID">391</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">delegate</string>
+						<string key="label">dataSource</string>
 						<reference key="source" ref="160169865"/>
-						<reference key="destination" ref="931549924"/>
+						<reference key="destination" ref="233557051"/>
 					</object>
-					<int key="connectionID">392</int>
+					<int key="connectionID">402</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">dataSource</string>
+						<string key="label">delegate</string>
 						<reference key="source" ref="160169865"/>
-						<reference key="destination" ref="931549924"/>
+						<reference key="destination" ref="233557051"/>
 					</object>
-					<int key="connectionID">393</int>
+					<int key="connectionID">403</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tableView</string>
+						<reference key="source" ref="233557051"/>
+						<reference key="destination" ref="160169865"/>
+					</object>
+					<int key="connectionID">404</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tweetsTableDelegate</string>
+						<reference key="source" ref="277907367"/>
+						<reference key="destination" ref="233557051"/>
+					</object>
+					<int key="connectionID">405</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1957,7 +1976,7 @@
 						<reference key="object" ref="698835585"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="571346031"/>
+							<reference ref="292380250"/>
 						</object>
 						<reference key="parent" ref="160169865"/>
 					</object>
@@ -1977,13 +1996,18 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">384</int>
-						<reference key="object" ref="931549924"/>
+						<reference key="object" ref="277907367"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">389</int>
-						<reference key="object" ref="571346031"/>
+						<reference key="object" ref="292380250"/>
 						<reference key="parent" ref="698835585"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">401</int>
+						<reference key="object" ref="233557051"/>
+						<reference key="parent" ref="0"/>
 					</object>
 				</object>
 			</object>
@@ -2143,6 +2167,7 @@
 					<string>382.IBPluginDependency</string>
 					<string>384.IBPluginDependency</string>
 					<string>389.IBPluginDependency</string>
+					<string>401.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.ImportedFromIB2</string>
 					<string>56.IBPluginDependency</string>
@@ -2333,6 +2358,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
@@ -2384,7 +2410,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">400</int>
+			<int key="maxID">405</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2393,42 +2419,21 @@
 					<string key="className">ApplicationController</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>applicationShouldTerminate:</string>
-							<string>reload:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-						</object>
+						<string key="NS.key.0">applicationShouldTerminate:</string>
+						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>applicationShouldTerminate:</string>
-							<string>reload:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBActionInfo">
-								<string key="name">applicationShouldTerminate:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">reload:</string>
-								<string key="candidateClassName">id</string>
-							</object>
+						<string key="NS.key.0">applicationShouldTerminate:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">applicationShouldTerminate:</string>
+							<string key="candidateClassName">id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>reload</string>
+							<string>tweetsTableDelegate</string>
 							<string>tweetsTableView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -2441,13 +2446,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>reload</string>
+							<string>tweetsTableDelegate</string>
 							<string>tweetsTableView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
-								<string key="name">reload</string>
+								<string key="name">tweetsTableDelegate</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -2459,6 +2464,46 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">ApplicationController.rb</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">TweetsTableDelegate</string>
+					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>tableView</string>
+							<string>tweets</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>tableView</string>
+							<string>tweets</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">tableView</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">tweets</string>
+								<string key="candidateClassName">id</string>
+							</object>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">TweetsTableDelegate.rb</string>
 					</object>
 				</object>
 			</object>

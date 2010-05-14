@@ -1,3 +1,5 @@
+require 'json'
+
 class TwitterService
   TWITTER_SEARCH_URL = "http://twitter.com/search.json"
   attr_reader :delegate
@@ -31,7 +33,6 @@ class TwitterService
   end
   
   def connection(connection, didReceiveResponse: response)
-    NSLog(response.statusCode.to_s)
   end
   
   def connection(connection, didReceiveData:data)
